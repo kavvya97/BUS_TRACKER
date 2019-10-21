@@ -1,0 +1,204 @@
+{   
+    "bus_number" : "21G",
+    "source": "Tambaram",
+    "destination": "Broadway",
+    "items": [
+      {
+        "id" : "21g_1",
+        "bus_route": "Tambaram",
+        "time": "10:30",
+        "lat": "12.9253",
+        "lng": "80.1168",
+        "rating": 4.5,
+        "img": {
+          "src": "tambaram.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Chennai - Theni Hwy, East Tambaram, Tambaram, Chennai, Tamil Nadu 600045 "
+
+      },
+      {
+        "id" : "21g_2",
+        "bus_route": " Chromepet",
+        "time": "10:40",
+        "lat": "12.9512",
+        "lng": "80.1404",
+        "rating": 5,
+        "img": {
+          "src": "chrompet.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "New Colony, Chromepet, Chennai, Tamil Nadu 600047"
+      },
+      {
+        "id" : "21g_3",
+        "bus_route": "Pallavaram",
+        "time": "10:45",
+        "lat": "12.9692",
+        "lng": "80.1502",
+        "rating": 4,
+        "img": {
+          "src": "pallavaram.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Chennai - Theni Hwy, Pallavaram, Chennai, Tamil Nadu 600043"
+      },
+      {
+        "id" : "21g_4",
+        "bus_route": "Meenampakkam",
+        "time": "10:45",
+        "lat": "12.9858",
+        "lng": "80.1737",
+        "rating": 4,
+        "img": {
+          "src": "meenambakkam.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Chennai - Theni Hwy, Meenambakkam, Chennai, Tamil Nadu 600016"
+      },
+      {
+        "id" : "21g_5",
+        "bus_route": "Alandur",
+        "time": "10:50",
+        "lat": "12.9956",
+        "lng": "80.1889",
+        "rating": 5,
+        "img": {
+          "src": "alandur.png",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Alandur Cement Road, CPWD Quarters, Kannan Colony, Alandur, Chennai, Tamil Nadu 600016"
+      },
+      {
+        "id" : "21g_6",
+        "bus_route": "Guindy",
+        "time": "10:50",
+        "lat": "13.0093",
+        "lng": " 80.2109",
+        "rating": 5,
+        "img": {
+          "src": "guindy.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Anna Salai, Guindy Industrial Estate, Alandur, Chennai, Tamil Nadu 600032"
+      },
+      {
+        "id" : "21g_7",
+        "bus_route": "Anna University",
+        "time": "11:00",
+        
+        "lat": "13.0083",
+        "lng": "80.2334",
+        "rating": 3.8,
+        "img": {
+          "src": "anna.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Sardar Patel Road, Anna University, kotturpuram, Chennai, Tamil Nadu 600025"
+      },
+      {
+        "id" : "21g_8",
+        "bus_route": "Kotturpuram",
+        "time": "11:10",
+        "lat": "13.0185",
+        "lng": "80.2411",
+        "rating": 4.5,
+        "img": {
+          "src": "koturpuram.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Chitra Nagar, Kotturpuram, Chennai, Tamil Nadu 600085"
+      },
+      {
+        "id" : "21g_9",
+        "bus_route": "Adyar Gate",
+        "time": "11:20",
+        "lat": "13.0290",
+        "lng": "80.2492",
+        "rating": 4.8,
+        "img": {
+          "src": "adyar_gate.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Austin Nagar, Alwarpet, Chennai, Tamil Nadu 600018"
+      },
+      {
+        "id" : "21g_10",
+        "bus_route": "Mylapore",
+        "time": "11:20",
+        "lat": "13.0343",
+        "lng": "80.2681",
+        "rating": 4.8,
+        "img": {
+          "src": "mylapore.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "62/244, Ramakrishna Mutt Rd, Venkatesa Agraharam, Mylapore, Chennai, Tamil Nadu 600004"
+      },
+      {
+        "id" : "21g_11",
+        "bus_route": "Yellow Pages",
+        "time": "11:20",
+        "lat": "13.0439",
+        "lng": "80.2683",
+        "rating": 4.8,
+        "img": {
+          "src": "Yellow.png",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Jagadambal colony, Durgapuram, Royapettah, Chennai, Tamil Nadu 600004"
+      },
+      {
+        "id" : "21g_12",
+        "bus_route": "Kanagi Statue",
+        "time": "11:20",
+        "lat": "13.0567",
+        "lng": "80.2820",
+        "rating": 4.8,
+        "img": {
+          "src": "kannagi.png",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Ayothiya Nagar, Triplicane, Chennai, 600005, India"
+      },
+      {
+        "id" : "21g_13",
+        "bus_route": "Broadway",
+        "time": "11:20",
+        "lat": "13.0875",
+        "lng": "80.2839",
+        "rating": 4.8,
+        "img": {
+          "src": "broadway.png",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Opp. Olympia, Mint Street, Esplanade, George Town, Chennai, Tamil Nadu 600001"
+      }
+    ]
+  }

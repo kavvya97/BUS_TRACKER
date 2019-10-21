@@ -1,0 +1,219 @@
+{   
+    "bus_number" : "54F",
+    "source": "Mandaveli",
+    "destination": "Poonamallee",
+    "items": [
+      {
+        "id" : "54f_1",
+        "bus_route": "Mandaveli",
+        "time": "10:30",
+        "lat": "13.0263",
+        "lng": "80.2661",
+        "rating": 4.5,
+        "img": {
+          "src": "mandaveli.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Ramakrishna Mutt Rd, Mandavelipakkam, Raja Annamalai Puram, Chennai, Tamil Nadu 600004"
+
+      },
+      {
+        "id" : "54f_2",
+        "bus_route": "Rani Meyyammai School",
+        "time": "11:20",
+        "lat": "13.0221",
+        "lng": "80.2634",
+        "rating": 4.8,
+        "img": {
+          "src": "rani.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Raja Muthiah Puram, Raja Annamalai Puram, Chennai, Tamil Nadu 600028"
+      },
+      {
+        "id" : "54f_3",
+        "bus_route": "Sathya Studios",
+        "time": "11:20",
+        "lat": "13.0163",
+        "lng": "80.2595",
+        "rating": 4.8,
+        "img": {
+          "src": "andra.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Adyar Bridge, Anna Sathya Nagar, Raja Annamalai Puram, Chennai, Tamil Nadu 600028"
+      },
+      {
+        "id" : "54f_4",
+        "bus_route": "Adyar Old depot",
+        "time": "11:20",
+        "lat": "13.0069",
+        "lng": "80.2554",
+        "rating": 4.8,
+        "img": {
+          "src": "old_dept.png",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Gandhi Nagar, Adyar, Chennai, Tamil Nadu 600020"
+      },
+      {
+        "id" : "54f_5",
+        "bus_route": "Gandhi Nagar",
+        "time": "11:20",
+        "lat": "13.0072",
+        "lng": "80.2494",
+        "rating": 4.8,
+        "img": {
+          "src": "gandhinagar.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "1st Main Rd, Gandhi Nagar, Adyar, Chennai, Tamil Nadu 600020"
+      },
+      {
+        "id" : "54f_6",
+        "bus_route": "Madhya Kailash",
+        "time": "11:20",
+        "lat": "13.0064",
+        "lng": "80.2474",
+        "rating": 4.8,
+        "img": {
+          "src": "madya.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Rajiv Gandhi IT Expy, Sriram Nagar, Adyar, Chennai, Tamil Nadu 600020"
+      },
+      {
+        "id" : "54f_7",
+        "bus_route": "Gandhi Mandapam",
+        "time": "11:00",
+        
+        "lat": "13.0074",
+        "lng": "80.2366",
+        "rating": 3.8,
+        "img": {
+          "src": "gandhi.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Sardar Patel Rd, Guindy National Park, Guindy, Chennai, Tamil Nadu 600022"
+      },
+      {
+        "id" : "54f_8",
+        "bus_route": "Guindy",
+        "time": "10:50",
+        "lat": "13.0093",
+        "lng": " 80.2109",
+        "rating": 5,
+        "img": {
+          "src": "guindy.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Anna Salai, Guindy Industrial Estate, Alandur, Chennai, Tamil Nadu 600032"
+      },
+      {
+        "id" : "54f_9",
+        "bus_route": "Butt Road",
+        "time": "11:20",
+        "lat": "13.0073",
+        "lng": "80.1970",
+        "rating": 4.8,
+        "img": {
+          "src": "buttroad.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Mount Poonamalle High Rd, Chakrapani Colony, St Thomas Mount, Chennai, Tamil Nadu 600016"
+      },
+      {
+        "id" : "54f_10",
+        "bus_route": "Manapakkam",
+        "time": "11:20",
+        "lat": "13.0209",
+        "lng": "80.1833",
+        "rating": 4.8,
+        "img": {
+          "src": "manapakkam.JPG",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Near Ramapuram Signal, Mount Poonamalle High Rd, Parthasarathy Nagar, Manapakkam, Chennai, Tamil Nadu 600116"
+      },
+      {
+        "id" : "54f_11",
+        "bus_route": "DLF and L&T",
+        "time": "11:20",
+        "lat": "13.0240",
+        "lng": "80.1780",
+        "rating": 4.8,
+        "img": {
+          "src": "dlf.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Mount Poonamalle High Rd, Ramapuram, Chennai, Tamil Nadu 600125"
+      },
+      {
+        "id" : "54f_12",
+        "bus_route": "Porur",
+        "time": "11:20",
+        "lat": "13.0345",
+        "lng": "80.1565",
+        "rating": 4.8,
+        "img": {
+          "src": "porur.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Trunk Rd, Ramakrishna Nagar, Porur, Chennai, Tamil Nadu 600116"
+      },
+      {
+        "id" : "54f_13",
+        "bus_route": "Iyyappanthangal",
+        "time": "11:20",
+        "lat": "13.0391",
+        "lng": "80.1324",
+        "rating": 4.8,
+        "img": {
+          "src": "iyyapan.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Mettu St, Iyyappanthangal, Chennai, Tamil Nadu 600056"
+      },
+      {
+        "id" : "54f_14",
+        "bus_route": "Poonamalle",
+        "time": "11:20",
+        "lat": "13.0518",
+        "lng": "80.0952",
+        "rating": 4.8,
+        "img": {
+          "src": "poonamalle.jpg",
+          "width": "147px",
+          "height": "164"
+          
+        },
+        "description": "Tamil NaduPrabu, Muthamil Nagar, Poonamallee, Chennai, Tamil Nadu 600056"
+      }
+    ]
+  }

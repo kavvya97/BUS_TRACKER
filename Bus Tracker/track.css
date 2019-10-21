@@ -1,0 +1,821 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: Trebuchet MS;
+}
+body, html {
+    
+  }
+  #loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #EFE9ED;
+    border-radius: 50%;
+    border-top: 16px solid #672A4E;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+.container{
+    position:relative;
+    
+}
+#map{
+    display: none;
+    width:100%;
+    height:1006px;
+    position:absolute;
+    z-index:-1;
+}
+
+#nav{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 115px;
+    background-color: #672A4E;
+}
+#websiteTag{
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 114px;
+    color: whitesmoke;
+    background-color: #5C2546;
+    
+}
+#icon{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 20px;
+}
+#bus{
+    position: absolute;
+    top: 25px;
+    color: #EFE9ED;
+    text-transform: uppercase;
+    left: 80px;
+    font-weight: bolder;
+    font-size: 40px;
+}
+#tracker{
+    position: absolute;
+    top: 65px;
+    color: #EFE9ED;
+    left: 80px;
+    font-size: 19px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#labelNav{
+    visibility: hidden;
+    text-align: left;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    left: 780px;
+}
+
+
+#busLabelSpan{
+    text-transform: uppercase;
+    color: #EFE9ED;
+    font-size: 35px;
+    position: relative;
+    padding: 20px;
+    top: 33px;
+    font-weight: bolder;
+ 
+}
+#sourceDestDiv{
+    color: #EFE9ED;
+    position: relative;
+    display: inline-grid;
+    margin-right: 20px;
+}
+#sourceLabel{
+    position: relative;
+    font-weight: bold;
+    font-size: 22px;
+    color: #E0D4DB;
+    display: inline;
+}
+
+#arrowSpan{
+    color: #EFE9ED;
+    font-size: 40px;
+    position: relative;
+    top: 35px;
+}
+.arrow1{
+    position: relative;
+    right: 17px;
+}
+
+#destinationLabel{
+    margin-top: 20px;
+    display: inline;
+    position: relative;
+    font-weight: bold;
+    font-size: 22px;
+    color: #E0D4DB;
+}
+#blur{
+    height: 1000px;
+    width: 1340px;
+    margin-left: 570px;
+    position: absolute;
+    top: 110px;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+   
+}
+.searchContainer{
+    display: none;
+    position: absolute;
+    background-color: #EFE9ED;
+    /* font-family: sans-serif; */
+    width: 565px;
+    top: 115px;
+    right: 0px;
+    visibility: hidden;
+}
+
+#time:hover,#route:hover,#location:hover,#button0 :hover{
+    background-color: #B394A6 !important;
+}
+#time,#route,#location{
+    cursor: pointer;
+}
+.searchTextContainer{
+    display: none;
+    height: 100%;
+    position: absolute;
+    width: 600px;
+    right: 0px;
+}
+#featureIcons{
+    position: relative;
+    visibility: visible;
+    height: 40px;
+    width: 600px;
+    right: 0px;
+}
+#swap_vertIcon{
+    position: absolute;
+    text-align: center;
+    right: 15px;
+    top: 10px;
+    color: #EFE9ED;
+    width: 27px;
+    height: 27px;
+    border-radius: 13.5px;
+    cursor: pointer;    
+}
+#directionBusIcon{
+    position: absolute;
+    top: 10px;
+    width: 27px;
+    text-align: center;
+    right: 60px;
+    color: #EFE9ED;
+    height: 27px;
+    cursor: pointer;
+    border-radius: 13.5px;
+}
+#searchForSourceDest{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #B3B3C4;
+    cursor: pointer;
+}
+#searchForBusNumber{
+    cursor: pointer;
+    position: relative;
+    float: right;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+#sourceDestinationInputContainer{
+   
+    position: absolute;
+    width: 600;
+    float: right;
+    width: 700px;
+    height: 50px;
+    right: 10px;
+    border-radius: 5px;
+    top: 46px;
+    border: 0px;
+    background-color: #5C2546;
+    border-radius: 10px;
+}
+#showBusNumber{
+    height: 50px;
+    width: 380px;
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    margin-top: 7px;
+    background-color: #5C2546;
+    border-radius: 10px;
+}
+#seperatorForBusNumber{
+    width: 3px;
+    background: #481D36;
+    height: 28px;
+    position: absolute;
+    top: 12px;
+    right: 65px;
+}
+#sourceInputTxt{
+    height: 50px;
+    width: 290px;
+    background: transparent;
+    border: 0px;
+    position: relative;
+    margin-left: 20px;
+}
+#seperator1{
+    top: 12px;
+    right: 375px;
+    height: 28px;
+    position: absolute;
+    width: 3px;
+    background-color: #481D36;
+}
+#seperator2{
+    top: 12px;
+    height: 28px;
+    right: 60px;
+    position: absolute;
+    width: 3px;
+    background-color: #481D36;
+}
+#destinationInputTxt{
+    height: 50px;
+    width: 290px;
+    background-color: transparent;
+    border: 0;
+    margin-left: 25px;
+}
+
+.text{
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 492px;
+    height: 50px;
+}
+::placeholder{
+    /* font-family: sans-serif; */
+    text-transform: none;
+    font-size: 20px;
+    padding-left:5px;
+    color: #B3B3C4;
+}
+#bus_Number{
+    border: 0;
+    height: 40px;
+    width: 280px;
+    background-color: transparent;
+    padding-right: 2;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+input[type="text"]{
+    font-size:20px;
+    color: white;
+  }
+
+
+.text{
+    padding: 10px;
+    width: 495px;
+    height: 46px;
+    border: black;
+    border-radius: 5px;
+}
+#bus_Number:hover{
+border-color: 0px solid #AADAFF;
+} 
+input {
+    outline:none;
+   }
+
+#closeIcon{
+    
+    position: absolute;
+    top: 0px;
+    left: 295px;
+    color: #B3B3C4;
+}
+#button1{
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    color: #B3B3C4;
+}
+
+/* #button4{
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    color: #B3B3C4;
+
+} */
+#options{
+    height: 50px;
+    padding: 10px;
+    background: #F2F2F2;
+    box-shadow: 0px 8px 8px rgba(0,0,0,0.5);
+}
+ul#options li {
+    
+    border: none;
+    display: inline-block;
+    /* background-color: #672A4E; */
+    /* padding-bottom: 0px; */
+    margin-right: 30px;
+    float: left;
+    width: 50px;
+    height: 50px;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 25px;
+
+}
+
+#searchResultContainer{
+    position: relative;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 820px;
+    box-shadow : 0px 8px 8px rgba(0,0,0,0.5);
+
+}
+
+.locationRow{
+    display:block;
+    background-color: white;
+    height : 160px;
+}
+#displayRoute{
+    display:inline;
+    table-layout: fixed;
+    text-align:center;
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    margin-right: 5px;
+    margin-left: 0px;
+}
+#displayTime{
+    display: inline;
+    table-layout: fixed;
+    text-align:center;
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    margin-right: 5px;
+    margin-left: 0px;
+}
+
+/* ul{
+    overflow:auto;
+   
+} */
+.timeRow{
+    overflow:auto;
+    width: 570px;
+    height: 130px;
+    overflow: hidden;
+    background-color: white;
+    border-bottom: 2px solid #E0D4DB;
+    text-align: left;
+    box-sizing: border-box;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    margin-top:0px;
+
+}
+.table_row{
+      overflow:auto;
+    width: 570px;
+    height: 180px;
+    overflow: hidden;
+    background-color:white;
+    border-bottom: 2px solid #E0D4DB;
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    flex: none;
+    margin-top:0px;
+}
+/* li{
+    overflow:auto;
+    width: 570px;
+    height: 190px;
+    overflow: hidden;
+    background-color: #EFE9ED;
+    border-bottom: 2px solid #E0D4DB;
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    margin-top:0px;
+   
+    
+} */
+.table_row:hover{
+    background: #D1BFC9;
+}
+
+.startTime{
+    color: #2F1324;
+    font-weight: bold;
+    font-size: larger;
+
+}
+.imageIcon1{
+    width: 15px;
+    height: 18px;
+    margin-bottom: 120px;
+}
+
+.imageIcon2{
+    width: 15px;
+    height: 18px;
+    margin-left: -14px;
+    margin-top: 125px;
+
+}
+.nearestStop{
+    font-size: 17px;
+    display: block;
+}
+.nearestStopTime{
+
+    font-weight: bold;
+    color: #2F1324;
+    margin-top: 5px;
+    display: inline-block;
+}
+.holderDiv{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+}
+.endTime{
+    color: #2F1324;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#near{
+    font-size: 18px;
+    /* width: 194px; */
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+}
+.vline{
+    border-left: 2px solid #E0D4DB;
+    
+}
+.vline1{
+    border-left: 2px solid #DADADA;
+    display: block;
+    height: 70px;
+    position: absolute;
+    left: 290px;
+    top: 45px;
+}
+/* .dot1{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 29px;
+    left: 1060px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+  }
+.dot2{
+    height: 15px;
+    position: absolute;
+    left: 1060px;
+    top: 56px;
+    width: 15px;
+    background-color: white;
+    border-radius: 50%;
+    
+  }  */
+h1{
+    position: relative;
+    left: 70px;
+    top: 25px;
+    color: floralwhite;
+}
+h3{
+    position: relative;
+    top: 20px;
+    left: 70px;
+    color: floralwhite;
+}
+
+
+#dept{
+    width: 300px;
+    height: 80px;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+#arrival{
+    width: 300px;
+    height: 80px;
+    padding-left: 20px;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom : 20px;
+}
+#Arrival,#Dept,#Near{
+    font-weight: bold;
+    font-size: 40px;
+}
+.div1{
+    position: relative;
+    display: inline;
+    margin-left: 20px;
+}
+#locationList{
+    font-family: sans-serif;
+    font-size: larger;
+    
+}
+.div2{
+    display: inline;
+    margin-left: 30px;
+}
+.div3{
+    position: relative;
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.div4{
+    position: relative;
+    display: inline-block;
+
+}
+
+.division {
+    float: left;
+    width: 293px;
+    height: 223px;
+}
+
+.Context{
+    display: block;
+    margin-top: 35px;
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    width: 292px;
+    font-size: 15px;
+    color: #2F1324;
+    font-weight: bolder;
+    font-size: larger;
+
+}
+#closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.excerpt{
+    margin-left: 30px;
+    display: block;
+    margin-top: 20px;
+    text-align: justify;
+    color: #3D192E;
+    overflow: hidden;
+    width: 289px;
+  
+}
+.date{
+    display: block;
+    margin-left: 30px;
+    /* height: 29px; */
+    margin-top: 5px;
+    /* margin-bottom: 10px; */
+    color: #2F1324;
+}
+.divImg{
+    float: right;
+    width: 140px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 30px;
+    height: 140px;
+}
+
+.options-img{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .modal {
+    position: fixed;
+    
+    z-index: 1;
+    /* padding-top: 100px; */
+    left: 1%;
+    top: 120px;
+    width: 98%;
+    height: 50px;
+    /* overflow: auto; */
+    background-color: #29B2EE;
+    border-radius: 10px;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    width: 99%;
+    height: 30px;
+
+  }
+  
+  /* The Close Button */
+  .close {
+    
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+.close:hover,.close:focus {
+    color: #aaaaaa;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+#directionBusIcon{
+    background-color: #52213E;
+}
+.closeModal {
+    color:white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+.closeModal:hover,.closeModal:focus {
+    color: #aaaaaa;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.imageSource{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+  }
+.busNumberDisplay{
+    position: relative;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 10px;
+}
+#divForDisplayingBus{
+    position: absolute;
+    display: block;
+    top: 115px;
+    width: 360px;
+    right: 0px;
+    max-height: 500px;
+}
+#ulForDisplayBus{
+    list-style-type: none;
+    background: #E5E5E5;
+   
+}
+.lidisplayBus{
+    border-bottom: 2px solid #CCCCCC;
+}
+#invalidBusNumber{
+    font-size: 18px;
+    position: relative;
+    top: 5px;
+    left: 850px;
+}
+#invalidRoute{
+    font-size: 18px;
+    position: relative;
+    top: 5px;
+    left: 850px;
+
+}
+.sourceDisplay{
+    position: relative;
+    font-size: 17px;
+}
+.spanarrow{
+    position: relative;
+    margin: 10px;
+}
+.destinationDisplay{
+    position: relative;
+    font-size: 17px;
+}
+.divisionForDisplayBusNumber{
+    height: 70px;
+    margin: 0 auto
+}
+.spanSourceDestinationArrow{
+    display: block;
+}
+.divBusNUmberSourceDestArrow{
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 7px;
+}
