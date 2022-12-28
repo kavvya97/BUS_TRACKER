@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BUS TRACK</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="track.css">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAexOwqmwbJhyV0hbfq3OUCa6hjP3G-Huo&callback=initMap"type="text/javascript"></script>
+        <script src="track.js"></script>
+       
+        <script src="track.json"></script>
+    </head>
+    <body onload="loader()" style="margin:0;">
+    <div id="loader"></div>
+    <div class="container">
+          
+          <div id="map"></div>
+          <div id = "nav">
+                <div id="websiteTag">
+                        <img src = "bussss.png" id="icon">
+                        <label id="bus">BUS</label>
+                        <label id="tracker">TRACKER</label>
+                </div> 
+               
+                <div id="labelNav">
+                   <span id = "busLabelSpan"> <label id="busLabel"></label></span>
+                   
+                   <span id= arrowSpan>
+                        <span class ="arrow">&#8643;</span>
+                        <span class = "arrow1">&#8638;</span>
+                    </span>
+                   <span id="sourceDestDiv">
+                        <label id = "sourceLabel"></label>
+                        <label id = "destinationLabel"></label>
+                   </span>
+                </div>
+          </div>
+         <div class = "searchContainer">
+                <ul id = "options">
+                    <li id="location" onclick="displayLocation()"><img class="options-img" src="currentpink.png" alt="" width = "5%" height="10%"></li>
+                    <li id="route" onclick="displayRoute()"><img class="options-img" src="routepink1.jpg" alt="" ></li>
+                    <li id="time" onclick="displayTime()"><img  class="options-img" src="timepink.png" alt="" ></li>
+                    <!-- <div id="closeIcon" onclick = "noDisplay()"><i class="material-icons" style="font-size:35px;color:white;padding-top: 30px">clear</i></div> -->
+                </ul>
+                <div id="searchResultContainer">
+                    <ul id="timeList">
+                    </ul> 
+                    <ul id="routeList">
+                    </ul>
+                    <div id="locationList">
+                        <div id="near">Nearest bus stop: <br><label id="Near"></label><br></div>
+                        <div id="dept">Last bus: <br> <label id="Dept"></label> minutes<br></div>
+                        <div id="arrival">Next bus: <br><label id="Arrival"></label> minutes<br></div>
+                    </div>
+                </div>
+                
+                <div id="searchResultContainer">
+                    <ul id="timeList2">
+                    </ul> 
+                    <ul id="routeList2">
+                    </ul>
+                    <div id="locationList2">
+                        <div id="near2">Nearest bus stop: <br><label id="Near2"></label><br></div>
+                        <div id="dept2">Last bus: <br> <label id="Dept2"></label> Minutes<br></div>
+                        <div id="arrival2">Next bus: <br><label id="Arrival2"></label> Minutes<br></div>
+                    </div>
+                          
+                </div>
+                
+        </div>
+        <div id = "divForDisplayingBus">
+            <ul id = "ulForDisplayBus">
+                    <li id="sourceDestinationTime" onclick="displayTime2()"><img  class="options-img" src="timepink.png" alt="" ></li>
+                    <li id="sourceDestinationRoute" onclick="displayRoute2()"><img class="options-img" src="routepink1.jpg" alt="" ></li>
+                    <li id="sourceDestinationLocation" onclick="displayLocation2()"><img class="options-img" src="currentpink.png" alt="" width = "5%" height="10%"></li>
+            </ul>
+        </div> 
+        <div class="searchTextContainer">
+            <div id="featureIcons">
+                <div id="swap_vertIcon" onclick="sourceDestination()">
+                    <i class="material-icons" style="font-size:25px;margin-left: 1px;margin-top: 1px;">swap_vert</i>
+                </div>
+                <div id="directionBusIcon" onclick="backToBus()">
+                    <i class="material-icons" style="font-size:20px;margin-top:3px;">directions_bus</i>
+                </div>
+            </div>
+            <div id="showBusNumber">
+                <input type="text" id="bus_Number" name="Bus_Number" placeholder="Search Bus Number" style="text-transform:uppercase" onkeypress="return IsAlphaNumeric(event);" ondrop="return false;" onpaste="return false;" />
+                <div id = "seperatorForBusNumber"></div>
+                <div id="searchForBusNumber" onclick="onSearchClick()">
+                    <i class="material-icons" style="font-size:35px;color:#B3B3C4;">search</i>
+                </div>
+                  
+            </div>
+            <div id="sourceDestinationInputContainer">
+                    <input type="text" id="sourceInputTxt" placeholder="Source" onkeypress="return IsAlphaNumericSD(event);" ondrop="return false;" onpaste="return false;" />
+                    <div id = "seperator1"></div>
+                    <input type="text" id="destinationInputTxt" placeholder="Destination" onkeypress="return IsAlphaNumericSD(event);" ondrop="return false;" onpaste="return false;" />
+                    <div id = "seperator2"></div>
+                    <div id="searchForSourceDest" onclick="displayBusesThroughGivenRoutes()">
+                        <i class="material-icons" style="font-size:35px;color:#B3B3C4;">search</i>
+                    </div>
+            </div>
+        </div> 
+        <!-- <div id="blur"></div> -->
+        
+        
+    </div> 
+    <div id="popupForDisplayingInvalidBusNumber" class = "modal">
+            <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <label id="invalidBusNumber">Invalid Bus Number</label>
+            </div>
+    </div> 
+    <div id="popupForDisplayingInvalidRoutes" class = "modal">
+            <div class="modal-content">
+                    <span class="closeModal">&times;</span>
+                    
+                    <label id="invalidRoute">No buses available in the given routes</label>
+            </div>
+    </div> 
+    </body>
+</html>
